@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import todoTitle from './components/todoTitle.vue'
-import addTodo from './components/addTodo.vue'
-import todoList from './components/todoList.vue'
-import tabGroup from './components/tabGroup.vue'
+import todoTitle from './todoTitle.vue'
+import addTodo from './addTodo.vue'
+import todoList from './todoList.vue'
+import tabGroup from './tabGroup.vue'
 export default {
   data(){
     return{
@@ -26,14 +26,14 @@ export default {
     todoList,
     tabGroup
   },
-  mounted:function(){
-    this.$store.dispatch('getTodoList');
+//   mounted:function(){
+//     this.$store.dispatch('getTodoList');
 
-  }
+//   }
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

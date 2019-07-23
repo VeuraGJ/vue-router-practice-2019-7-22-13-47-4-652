@@ -32,8 +32,8 @@ export default {
      checkBoxChange(item){
        item.complete = !item.complete
        let updateItem ={id:item.id,content:item.content,complete:item.complete}
-       this.$store.dispatch('updateTodoList',updateItem)
-      //  this.changeItem(updateItem);
+      //  this.$store.dispatch('updateTodoList',updateItem)
+       this.changeItem(updateItem);
     },
     modifyItem(){
       this.ediable = true;
@@ -42,13 +42,13 @@ export default {
     enterClick(item){
       item.content = this.content;
       let updateItem ={id:item.id,content:item.content,complete:item.complete}
-       this.$store.dispatch('updateTodoList',updateItem)
-      //  this.changeItem(updateItem);
+      //  this.$store.dispatch('updateTodoList',updateItem)
+       this.changeItem(updateItem);
       this.ediable = false;
     },
     deleteItem(item){
-       this.$store.dispatch('deleteTodoList',item.id)
-      //  this.changeItem(updateItem);
+      //  this.$store.dispatch('deleteTodoList',item.id)
+       this.changeItem(updateItem);
     }
   }
 }

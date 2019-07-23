@@ -14,7 +14,14 @@ export default {
   },
   computed:{
     todoItems(){
-     return this.$store.getters.switchItems(this.$store.state.activeKind);
+     switch (this.$store.state.activeKind) {
+        case "Active":
+          return this.$store.state.todoList.filter(n => !n.complete);
+        case "Complete":
+          return this.$store.state.todoList.filter(n => n.complete);
+        case "All":
+          return this.$store.state.todoList;
+      }
     }
   }
 }
