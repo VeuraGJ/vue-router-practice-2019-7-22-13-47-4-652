@@ -32,12 +32,13 @@ export default {
             this.$router.push('/home/todoList');
       },
        myInfo(){
-            this.$router.push('/home/my');
+            // this.$router.push('/home/my');
+            this.$router.push({name:'my',params:{myname:this.username}})
       }
   },
-  mounted:function(){
-      this.$router.push('/home/todoList');
-  }
+//   mounted:function(){
+//       this.$router.push('/home/todoList');
+//   }
 }
 </script>
 
