@@ -14,7 +14,8 @@ export default {
   },
   methods:{
       useButton(){
-          this.$router.push('/home')
+        //   this.$router.push('/home')
+        this.$router.push({name:'home',params:{username:this.inputText}})
       }
   }
 }
