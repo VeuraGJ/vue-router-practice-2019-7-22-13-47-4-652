@@ -19,6 +19,7 @@ export default new VueRouter({
         children:[
         {
             path:'todoList',
+            name:'todoList',
             component: todos
         },
         {

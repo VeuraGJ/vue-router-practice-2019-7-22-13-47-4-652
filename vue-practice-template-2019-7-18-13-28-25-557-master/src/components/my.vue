@@ -1,7 +1,8 @@
 <template>
   <div>
     <img src="../assets/logo.png">
-    <span>{{myname}}</span>
+    <p>用户名：{{myname}}</p>
+    <p>电话：11111</p>
   </div>
 </template>
 

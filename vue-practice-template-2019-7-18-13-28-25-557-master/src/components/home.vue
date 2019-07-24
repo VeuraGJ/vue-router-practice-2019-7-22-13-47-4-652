@@ -2,7 +2,7 @@
   <div>
       <div>
     <button @click="goBack">返回</button>
-    <span>用户名：{{username}}</span>
+    <span>用户名：{{name}}</span>
       </div>
     <ul>
         <li @click="todo">TodoList列表</li>
@@ -16,6 +16,11 @@
 
 <script>
 export default {
+  data(){
+    return{
+      name:''
+    }
+  },
   computed:{
       username(){
           return this.$route.params.username
@@ -29,16 +34,17 @@ export default {
           }
       },
       todo(){
-            this.$router.push('/home/todoList');
+            // this.$router.push('/home/todoList');
+            this.$router.replace({name:'todoList'})
       },
        myInfo(){
-            // this.$router.push('/home/my');
-            this.$router.push({name:'my',params:{myname:this.username}})
+            // this.$router.push({name:'my',params:{myname:this.username}})
+            this.$router.replace({name:'my',params:{myname:this.name}})
       }
   },
-//   mounted:function(){
-//       this.$router.push('/home/todoList');
-//   }
+  mounted:function(){
+      this.name = this.$route.params.username
+  }
 }
 </script>
 

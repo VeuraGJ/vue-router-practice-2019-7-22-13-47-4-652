@@ -19,5 +19,5 @@ export default{
       "content": "14232",
       "complete": true
     }],
-      activeKind: 'All' 
+      activeKind: 'All' ,
 }
